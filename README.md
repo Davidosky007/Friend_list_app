@@ -14,10 +14,12 @@ project was built to fully understand how a crud app works in rails. some extra 
 ## Built With
 
 - Ruby
+- Rails
+- Devise
 
 ## Live Demo
 
-[Live Demo Link]()
+[Live Demo Link](https://frendslists.herokuapp.com/)
 
 ## Getting Started
 
@@ -62,28 +64,3 @@ Give a ⭐️ if you like this project!
 This project is [MIT](./LICENSE) licensed.
 
 
-
-# README
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
