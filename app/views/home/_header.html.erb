@@ -1,0 +1,21 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <%= link_to "Friend App", root_path, class:"navbar-brand" %>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+          <%= link_to "About Us", home_about_path, class:"nav-link" %>
+          <% if model_signed_in? %>
+          <%= link_to "Sign Out", destroy_model_session_path, method: :delete, class:"nav-link" %>
+          <%= link_to "Add Friends", new_friend_path, class:"nav-link" %>
+          <%= link_to "Edit Profile", edit_model_registration_path, class:"nav-link" %>
+          <% else %>
+          <%= link_to "Sign Up",  new_model_registration_path, class:"nav-link" %>
+          <%= link_to "Sign In", new_model_session_path, class:"nav-link" %>
+          <% end %>
+      </div>
+    </div>
+  </div>
+</nav>

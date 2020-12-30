@@ -1,0 +1,38 @@
+
+<% if model_signed_in? %>
+<div class="card table-responsive">
+
+<table class="table table-bordered table-hover">
+  <thead class="thead-dark">
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Phone</th>
+      <th>Twitter</th>
+    </tr>
+  </thead>
+
+  <tbody class="table-striped">
+    <% @friends.each do |friend| %>
+      <% if friend.model == current_model %>
+      <tr>
+        <td><%=  link_to friend.first_name + ' ' + friend.last_name, friend %></td>
+        <td><%= friend.email %></td>
+        <td><%= friend.phone %></td>
+        <td><%= friend.twitter %></td>
+        <td><%= link_to 'Delete', friend, method: :delete, data: { confirm: 'Are you sure?' }, class:'btn btn-danger' %></td>
+      </tr>
+      <% end %>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+</div>
+<br/>
+<%= link_to 'New Friend', new_friend_path, class:'btn btn-secondary' %>
+
+  <% else %>
+<h1>Welcome To The Friend List App </h1>
+<p> Please Log In if you already have an account Or Sign up if you don't <p/>
+<% end %>
